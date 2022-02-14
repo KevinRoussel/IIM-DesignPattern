@@ -7,6 +7,10 @@ public class PlayerInputDispatcher : MonoBehaviour
 {
     [SerializeField] Camera _mainCamera;
 
+    [SerializeField] EntityMovement _movement;
+    [SerializeField] EntityFire _fire;
+    [SerializeField] EntityRotation rotation;
+
     [SerializeField] InputActionReference _pointerPosition;
     [SerializeField] InputActionReference _moveJoystick;
     [SerializeField] InputActionReference _fireButton;
@@ -17,8 +21,5 @@ public class PlayerInputDispatcher : MonoBehaviour
     {
         // binding
 
-
     }
-
-
 }

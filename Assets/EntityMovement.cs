@@ -5,18 +5,15 @@ using UnityEngine;
 public class EntityMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D _rb;
+    [SerializeField] float _speed=1;
 
     public Vector2 Direction { get; private set; }
-    public float Speed { get; private set; }
-    public float Angle { get; private set; }
 
 
     void Update()
     {
         // Update Movement
-        _rb.MovePosition(((Vector2)transform.position + Direction) * Time.deltaTime * Speed);
-
-        // Update Rotation
+        _rb.MovePosition(((Vector2)transform.position + Direction) * Time.deltaTime*_speed);
 
     }
 
@@ -24,18 +21,5 @@ public class EntityMovement : MonoBehaviour
     {
         Direction = v.normalized;
     }
-
-    public void PrepareSpeed(float s)
-    {
-        Speed = s;
-    }
-
-    public void PrepareAngle(float angle)
-    {
-
-    }
-
-
-
 
 }
