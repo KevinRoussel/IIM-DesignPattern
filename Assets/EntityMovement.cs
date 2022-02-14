@@ -14,7 +14,9 @@ public class EntityMovement : MonoBehaviour
     {
         // Update Movement
         _rb.MovePosition(((Vector2)transform.position + Direction) * Time.deltaTime*_speed);
-
+        
+        // Reset input
+        Direction = Vector2.zero;
     }
 
     public void PrepareDirection(Vector2 v)

@@ -21,7 +21,10 @@ public class AIBrain : MonoBehaviour
 
     private void Update()
     {
-        _currentRotation.AimPosition = _playerTarget.transform.position;
+        // Je veux targeter constamment le joueur
+
     }
 
 }
+
+

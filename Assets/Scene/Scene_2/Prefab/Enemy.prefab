@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentRotation: {fileID: 1749148197083293963}
-  _fire: {fileID: 0}
+  _fire: {fileID: 4645590585023127803}
   _playerTarget: {fileID: 0}
 --- !u!1 &2729403224212599125
 GameObject:
