@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] Rigidbody _rb;
+    [SerializeField] Rigidbody2D _rb;
     [SerializeField] float _speed;
 
     public Vector3 Direction { get; private set; }
@@ -18,17 +18,15 @@ public class Bullet : MonoBehaviour
         return this;
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        _rb.MovePosition(transform.position + (Direction.normalized * Time.fixedDeltaTime * _speed));
+        _rb.MovePosition((transform.position + (Direction.normalized * Time.deltaTime * _speed)));
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        var v = other.GetComponentInParent<PlayerEntity>();
-        v?.Damage(Power);
+        collision.GetComponentInParent<PlayerEntity>()?.Damage(Power);
         Destroy(gameObject);
     }
-
 
 }
