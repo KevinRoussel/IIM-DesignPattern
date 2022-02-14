@@ -21,7 +21,7 @@ public class Fire : MonoBehaviour
     {
         var b = Instantiate(_bulletPrefab, _spawnPoint.transform.position, Quaternion.identity, null)
             .GetComponent<Bullet>()
-            .Init(_spawnPoint.TransformDirection(Vector3.up), power);
+            .Init(_spawnPoint.TransformDirection(Vector3.right), power);
     }
 
 }
