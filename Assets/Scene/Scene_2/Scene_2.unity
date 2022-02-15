@@ -208,10 +208,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 31.1
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -270,8 +270,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d610d4f5ac1cd48ab91093660d6f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  _text: {fileID: 0}
+  _player: {fileID: 7643354166520097587}
+  _text: {fileID: 118918021}
 --- !u!1 &484391545
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vie du joueur :'
+  m_text: 'Vie du joueur : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -357,10 +357,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 31.1
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -927,6 +927,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ed3439ca4dc2748a9934d53a24649a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onToggleOn:
+    m_PersistentCalls:
+      m_Calls: []
+  _onToggleOff:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1992039953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1073,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 946524313}
+    - target: {fileID: 2424903799771064699, guid: 84c7e5cdf1200cf4ba554bd4c44ab2e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2881159842222361667, guid: 84c7e5cdf1200cf4ba554bd4c44ab2e9, type: 3}
       propertyPath: _mainCamera
       value: 
@@ -1107,6 +1117,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7dd8faa654533034997c8f099dcc0568, type: 2}
+    - target: {fileID: 8989656122345343087, guid: 84c7e5cdf1200cf4ba554bd4c44ab2e9, type: 3}
+      propertyPath: _speed
+      value: 7.12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84c7e5cdf1200cf4ba554bd4c44ab2e9, type: 3}
 --- !u!114 &7643354166520097587 stripped

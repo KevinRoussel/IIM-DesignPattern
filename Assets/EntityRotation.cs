@@ -15,7 +15,7 @@ public class EntityRotation : MonoBehaviour
         return Quaternion.Euler(0f, 0f, Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         transform.rotation = AimPositionToZRotation(transform.position, AimPosition, _camera);
     }

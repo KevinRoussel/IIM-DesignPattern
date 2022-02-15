@@ -12,8 +12,17 @@ public class DisplayHealth : MonoBehaviour
 
     private void Start()
     {
-        // binding
+        _player.OnHealthChanged += UpdateDisplayedHealth;
 
     }
 
+    private void OnDestroy()
+    {
+        _player.OnHealthChanged -= UpdateDisplayedHealth;
+    }
+
+    private void _player_OnHealthChanged(int obj)
+    {
+        UpdateDisplayedHealth(obj);
+    }
 }

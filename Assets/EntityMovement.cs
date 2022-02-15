@@ -9,14 +9,11 @@ public class EntityMovement : MonoBehaviour
 
     public Vector2 Direction { get; private set; }
 
-
     void Update()
     {
         // Update Movement
-        _rb.MovePosition(((Vector2)transform.position + Direction) * Time.deltaTime*_speed);
-        
-        // Reset input
-        Direction = Vector2.zero;
+        transform.Translate(Direction * Time.deltaTime * _speed, Space.World);
+        //_rb.MovePosition(((Vector2)transform.position + Direction) * Time.fixedDeltaTime * _speed);
     }
 
     public void PrepareDirection(Vector2 v)

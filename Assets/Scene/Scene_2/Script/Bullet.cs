@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bullet : MonoBehaviour
 {
@@ -25,7 +26,12 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponentInParent<PlayerEntity>()?.Damage(Power);
+        collision.GetComponentInParent<ITouchable>()?.Touch(Power);
+
+        var c = collision.GetComponentInParent<ITouchable>();
+        if (c != null) c.Touch(Power);
+
+
         Destroy(gameObject);
     }
 
