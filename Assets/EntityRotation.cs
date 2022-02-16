@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class EntityRotation : MonoBehaviour
 {
-    [SerializeField] Camera _camera;
+    [SerializeField] CameraReference _camera;
 
     public Vector2 AimPosition { get; set; }
 
@@ -17,7 +17,7 @@ public class EntityRotation : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.rotation = AimPositionToZRotation(transform.position, AimPosition, _camera);
+        transform.rotation = AimPositionToZRotation(transform.position, AimPosition, _camera.Instance);
     }
 
 }

@@ -208,7 +208,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.1
+  m_fontSize: 33.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.1
+  m_fontSize: 33.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -668,6 +668,7 @@ GameObject:
   - component: {fileID: 946524313}
   - component: {fileID: 946524312}
   - component: {fileID: 946524315}
+  - component: {fileID: 946524316}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -774,6 +775,20 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &946524316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946524311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5d8aef93ebaff4988252e98264ca44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 946524313}
+  _camRef: {fileID: 11400000, guid: b5c5ee63eb73dd04ca44a3694ca4edad, type: 2}
 --- !u!1 &1442558615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,10 +1023,6 @@ PrefabInstance:
       propertyPath: _playerTarget
       value: 
       objectReference: {fileID: 7643354166520097587}
-    - target: {fileID: 1749148197083293963, guid: f4c23505b50de53409181428796ee2b3, type: 3}
-      propertyPath: _camera
-      value: 
-      objectReference: {fileID: 946524313}
     - target: {fileID: 3736426140379942390, guid: f4c23505b50de53409181428796ee2b3, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1079,10 +1090,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2881159842222361667, guid: 84c7e5cdf1200cf4ba554bd4c44ab2e9, type: 3}
       propertyPath: _mainCamera
-      value: 
-      objectReference: {fileID: 946524313}
-    - target: {fileID: 3175119064615847040, guid: 84c7e5cdf1200cf4ba554bd4c44ab2e9, type: 3}
-      propertyPath: _camera
       value: 
       objectReference: {fileID: 946524313}
     - target: {fileID: 5155277826443900506, guid: 84c7e5cdf1200cf4ba554bd4c44ab2e9, type: 3}
