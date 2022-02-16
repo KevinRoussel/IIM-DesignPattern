@@ -2,24 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, ITouchable
+public class Enemy : MonoBehaviour
 {
-
-    [SerializeField] int MaxHealth;
-
-    public int CurrentHealth { get; private set; }
-
-    public void Touch(int power)
-    {
-        CurrentHealth -= power;
-        Debug.Log($"Damage. Current Health : {CurrentHealth}");
-    }
+    [SerializeField] Health _health;
 
     private void Awake()
     {
-        CurrentHealth = MaxHealth;
-    }
 
+    }
 
 
 }

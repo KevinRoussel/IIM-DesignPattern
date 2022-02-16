@@ -3,25 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerEntity : MonoBehaviour, ITouchable
+public class PlayerEntity : MonoBehaviour
 {
-    [SerializeField] int MaxHealth;
+    [SerializeField] Health _health;
 
-    public event Action<int> OnHealthChanged;
-
-    public int CurrentHealth { get; private set; }
+    public Health Health => _health;
 
     private void Awake()
     {
-        CurrentHealth = MaxHealth;
+
     }
 
-    public void Touch(int power)
-    {
-        CurrentHealth -= power;
-        OnHealthChanged?.Invoke(CurrentHealth);
-        Debug.Log($"Damage. Current Health : {CurrentHealth}");
-    }
 }
 
 

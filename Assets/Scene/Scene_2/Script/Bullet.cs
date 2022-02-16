@@ -26,11 +26,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponentInParent<ITouchable>()?.Touch(Power);
-
-        var c = collision.GetComponentInParent<ITouchable>();
-        if (c != null) c.Touch(Power);
-
+        collision.GetComponentInParent<IHealth>()?.TakeDamage(Power);
 
         Destroy(gameObject);
     }

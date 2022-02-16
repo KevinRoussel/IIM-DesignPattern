@@ -164,6 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7708049869254039122}
   - component: {fileID: 2424903799771064699}
+  - component: {fileID: 7102965514168495217}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
@@ -211,6 +212,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7102965514168495217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4719610752975132196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b50c3e56999a9b498d61ec1329cb175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 1657962468365373699}
 --- !u!1 &4833347746389209372
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +437,7 @@ GameObject:
   - component: {fileID: 6057874696252468375}
   - component: {fileID: 3175119064615847040}
   - component: {fileID: 5480497300045032309}
+  - component: {fileID: 1657962468365373699}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -460,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10dc37bb409768a4db5c42fc53a98f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
+  _health: {fileID: 1657962468365373699}
 --- !u!114 &8989656122345343087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,3 +564,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 4371661290154475707}
   _bulletPrefab: {fileID: 6056709005347279180, guid: 01834f7a3e0c2fb448d9d118fcdbd49c, type: 3}
+--- !u!114 &1657962468365373699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7643354165465608913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b012a9497459e4fba5ced019bc2ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startHealth: 10
+  _maxHealth: 10
