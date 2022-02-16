@@ -74,7 +74,7 @@ public class PlayerInputDispatcher : MonoBehaviour
         float fire = obj.ReadValue<float>();
         if(fire==1)
         {
-            _fire.FireBullet(10);
+            _fire.FireBullet(2);
         }
     }
 

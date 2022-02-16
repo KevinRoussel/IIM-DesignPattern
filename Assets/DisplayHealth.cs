@@ -8,7 +8,7 @@ public class DisplayHealth : MonoBehaviour
     [SerializeField] PlayerEntity _player;
     [SerializeField] TextMeshProUGUI _text;
 
-    void UpdateDisplayedHealth(int newValue) => _text.text = newValue.ToString();
+    void UpdateDisplayedHealth(int _) => _text.text = _player.Health.CurrentHealth.ToString();
 
     private void Start()
     {

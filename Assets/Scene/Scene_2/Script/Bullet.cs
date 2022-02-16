@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponentInParent<IHealth>()?.TakeDamage(Power);
+        collision.GetComponent<IHealth>()?.TakeDamage(Power);
 
         Destroy(gameObject);
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthProxy : MonoBehaviour, IHealth
 {
@@ -13,17 +14,17 @@ public class HealthProxy : MonoBehaviour, IHealth
 
     public bool IsDead => _health.IsDead;
 
-    public event Action OnSpawn
+    public event UnityAction OnSpawn
     {
         add => _health.OnSpawn += value;
         remove => _health.OnSpawn -= value;
     }
-    public event Action<int> OnDamage
+    public event UnityAction<int> OnDamage
     {
         add => _health.OnDamage += value;
         remove => _health.OnDamage -= value;
     }
-    public event Action OnDeath
+    public event UnityAction OnDeath
     {
         add => _health.OnDeath += value;
         remove => _health.OnDeath -= value;

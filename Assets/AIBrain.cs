@@ -15,14 +15,13 @@ public class AIBrain : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
 
-            _fire.FireBullet(1);
+            //_fire.FireBullet(1);
         }
     }
 
     private void Update()
     {
-        // Je veux targeter constamment le joueur
-
+        _currentRotation.AimPosition = _playerTarget.transform.position;
     }
 
 }

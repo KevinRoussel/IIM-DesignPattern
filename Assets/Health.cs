@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour, IHealth
 {
     // Champs
     [SerializeField] int _startHealth;
     [SerializeField] int _maxHealth;
+    [SerializeField] UnityEvent _onDeath;
 
     // Propriétés
     public int CurrentHealth { get; private set; }
@@ -15,9 +17,9 @@ public class Health : MonoBehaviour, IHealth
     public bool IsDead => CurrentHealth <= 0;
 
     // Events
-    public event Action OnSpawn;
-    public event Action<int> OnDamage;
-    public event Action OnDeath;
+    public event UnityAction OnSpawn;
+    public event UnityAction<int> OnDamage;
+    public event UnityAction OnDeath { add => _onDeath.AddListener(value); remove => _onDeath.RemoveListener(value); }
 
     // Methods
     void Awake() => Init();
@@ -37,7 +39,7 @@ public class Health : MonoBehaviour, IHealth
 
         if(CurrentHealth <= 0)
         {
-            OnDeath?.Invoke();
+            _onDeath?.Invoke();
         }
     }
 
