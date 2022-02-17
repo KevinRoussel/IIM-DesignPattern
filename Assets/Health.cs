@@ -32,6 +32,8 @@ public class Health : MonoBehaviour, IHealth
 
     public void TakeDamage(int amount)
     {
+        if (amount < 0) throw new ArgumentException($"Argument amount {nameof(amount)} is negativ");
+
         var tmp = CurrentHealth;
         CurrentHealth = Mathf.Max(0, CurrentHealth - amount);
         var delta = CurrentHealth - tmp;

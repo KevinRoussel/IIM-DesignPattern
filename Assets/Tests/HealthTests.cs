@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ public class HealthTests
     Health CreateHealth(int maxHealth, int startHealth) 
         => new GameObject("Health GameObject")
             .AddComponent<Health>()
-            .SetField("_maxHealth", 10)
-            .SetField("_startHealth", 10)
+            .SetField("_maxHealth", maxHealth)
+            .SetField("_startHealth", startHealth)
             .CallAwake();
 
     // A Test behaves as an ordinary method
@@ -28,6 +29,30 @@ public class HealthTests
         Assert.AreEqual(1, h.CurrentHealth);
     }
 
+    [Test]
+    public void HealthStartsWith10AndDamage100Obtain1()
+    {
+        // Arrange
+        var h = CreateHealth(10, 10);
+
+        // Act
+        h.TakeDamage(100);
+
+        // Assert
+        Assert.AreEqual(0, h.CurrentHealth);
+    }
+
+    [Test]
+    public void HealthStartsWith10AndDamageMinus100Obtain1()
+    {
+        // Arrange
+        var h = CreateHealth(10, 10);
+
+        // Act
+
+        // Assert
+        Assert.Throws<ArgumentException>(() => h.TakeDamage(-100));
+    }
 
 
 

@@ -13,9 +13,9 @@ public class AIBrain : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(Random.Range(1f, 5f));
 
-            //_fire.FireBullet(1);
+            _fire.FireBullet(2);
         }
     }
 
