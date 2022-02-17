@@ -31,4 +31,8 @@ public class HealthProxy : MonoBehaviour, IHealth
     }
 
     public void TakeDamage(int amount) => _health.TakeDamage(amount);
+
+    
+
+
 }

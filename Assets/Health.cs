@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,6 +44,50 @@ public class Health : MonoBehaviour, IHealth
         {
             _onDeath?.Invoke();
         }
+
     }
+
+    [Button("test")]
+    void MaFonction()
+    {
+        var enumerator = MesIntPrefere();
+
+        while(enumerator.MoveNext())
+        {
+            Debug.Log(enumerator.Current);
+        }
+    }
+
+
+    List<IEnumerator> _coroutines;
+
+    IEnumerator<int> MesIntPrefere()
+    {
+
+        //
+
+        var age = 12;
+
+        yield return 12;
+
+
+        //
+
+        yield return 3712;
+
+        age++;
+        //
+
+        yield return 0;
+
+
+
+        //
+        yield break;
+    }
+
+
+
+
 
 }

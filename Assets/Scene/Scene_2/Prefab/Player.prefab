@@ -542,6 +542,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df256e89e27ac043ad6bd2e9f2fd0e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rotation: {fileID: 3175119064615847040}
+  _radius: {fileID: 6964740590057377238}
+  _player: {fileID: 4509255931906459442}
+  _enemiesInRadius: []
 --- !u!1 &7643354165465608913
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +670,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7643354165465608913}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed26146efcc87de4f89c71f3859f7415, type: 3}
   m_Name: 

@@ -29,6 +29,15 @@ public class Bullet : MonoBehaviour
         collision.GetComponent<IHealth>()?.TakeDamage(Power);
 
         Destroy(gameObject);
+
+
+        var health = collision.GetComponent<IHealth>();
+        health.OnDamage += Health_OnDamage;
+        health.OnDamage += (arg0) => { };
     }
 
+    private void Health_OnDamage(int arg0)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -24,7 +24,7 @@ public class PlayerInputDispatcher : MonoBehaviour
     {
         // binding
         _fireButton.action.started += FireInput;
-        _pointerPosition.action.performed += AimPosition;
+        //_pointerPosition.action.performed += AimPosition;
 
         _moveJoystick.action.started += MoveInput;
         _moveJoystick.action.canceled += MoveInputCancel;
@@ -33,7 +33,7 @@ public class PlayerInputDispatcher : MonoBehaviour
     private void OnDestroy()
     {
         _fireButton.action.started -= FireInput;
-        _pointerPosition.action.performed -= AimPosition;
+        //_pointerPosition.action.performed -= AimPosition;
 
         _moveJoystick.action.started -= MoveInput;
         _moveJoystick.action.canceled -= MoveInputCancel;
